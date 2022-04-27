@@ -1,0 +1,16 @@
+{
+    "reservations": [
+        {
+            "vehiculeType": "Voiture",
+            "vehiculeModel": "Peugeot 206",
+            "actualDepositEvent": "Dépot programmé",
+            "actualReturnEvent": "Retour programmé",
+            "programmedDepositDate": 1650957885,
+            "programmedDepositPlace": "Paris, 16eme",
+            "parkingDate": 1650957885,
+            "parkingPlace": "Paris, 16eme",
+            "programmedReturnDate": 1650957885,
+            "programmedReturnPlace": "Paris, 16eme"
+        }
+    ]
+}

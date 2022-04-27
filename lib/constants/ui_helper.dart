@@ -34,3 +34,35 @@ class White {
 class Black {
   static Color standard = const Color(0xff000000);
 }
+
+Widget verticalSpacer(double height) {
+  return SizedBox(
+    height: height,
+  );
+}
+
+Widget horizontalSpacer(double width) {
+  return SizedBox(
+    width: width,
+  );
+}
+
+String dateFormat(DateTime date) {
+  String formattedDate = "";
+
+  if (date.day < 10) formattedDate += '0';
+  formattedDate += date.day.toString();
+  formattedDate += '/';
+  if (date.month < 10) formattedDate += '0';
+  formattedDate += date.month.toString();
+  formattedDate += '/';
+  formattedDate += date.year.toString();
+  formattedDate += ' - ';
+  if (date.hour < 10) formattedDate += '0';
+  formattedDate += date.hour.toString();
+  formattedDate += 'h';
+  if (date.minute < 10) formattedDate += '0';
+  formattedDate += date.minute.toString();
+
+  return formattedDate;
+}
