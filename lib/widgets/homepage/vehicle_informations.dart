@@ -26,7 +26,7 @@ class VehicleInformations extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
               child: Text(
                 vehicleModel,
                 style: TextStyle(

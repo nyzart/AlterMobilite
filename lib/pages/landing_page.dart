@@ -17,17 +17,19 @@ class LandingPage extends StatelessWidget {
 
     int index = indexList.indexOf("HomePage");
 
-    return Scaffold(
-      appBar: AlterMobiliteAppBar(
-        size: preferredAppBarSize,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AlterMobiliteAppBar(
+          size: preferredAppBarSize,
+        ),
+        body: Stack(
+          children: [
+            AppBackground(size: size),
+            pagesList[index],
+          ],
+        ),
+        extendBodyBehindAppBar: true,
       ),
-      body: Stack(
-        children: [
-          AppBackground(size: size),
-          pagesList[index],
-        ],
-      ),
-      extendBodyBehindAppBar: true,
     );
   }
 }

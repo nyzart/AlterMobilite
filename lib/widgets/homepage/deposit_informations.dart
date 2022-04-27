@@ -31,7 +31,7 @@ class DepositInformations extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
               child: Text(
                 actualDepositEvent,
                 style: TextStyle(
@@ -42,7 +42,7 @@ class DepositInformations extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
               child: Text(
                 dateFormat(DateTime.fromMillisecondsSinceEpoch(
                         actualDepositDate != null
