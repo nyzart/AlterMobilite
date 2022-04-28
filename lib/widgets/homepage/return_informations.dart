@@ -16,57 +16,63 @@ class ReturnInformations extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Icon(
-            Icons.arrow_back,
-            color: Brown.standard,
-          ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+    return Container(
+      color: Colors.transparent,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
-              child: Text(
-                programmedReturnEvent,
-                style: TextStyle(
-                  color: Gray.textEventInformations,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                ),
+              padding: const EdgeInsets.all(16.0),
+              child: Icon(
+                Icons.arrow_back,
+                color: Brown.standard,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
-              child: Text(
-                dateFormat(DateTime.fromMillisecondsSinceEpoch(
-                        programmedReturnDate != null
-                            ? programmedReturnDate! * 1000
-                            : 0))
-                    .toString(),
-                style: TextStyle(
-                  color: Gray.textEventInformations,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
+                  child: Text(
+                    programmedReturnEvent,
+                    style: TextStyle(
+                      color: Gray.textEventInformations,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            Text(
-              programmedReturnPlace,
-              style: TextStyle(
-                color: Gray.textEventInformations,
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-              ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 6),
+                  child: Text(
+                    dateFormat(DateTime.fromMillisecondsSinceEpoch(
+                            programmedReturnDate != null
+                                ? programmedReturnDate! * 1000
+                                : 0))
+                        .toString(),
+                    style: TextStyle(
+                      color: Gray.textEventInformations,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                Text(
+                  programmedReturnPlace,
+                  style: TextStyle(
+                    color: Gray.textEventInformations,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
-      ],
+      ),
     );
   }
 }

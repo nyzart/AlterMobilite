@@ -1,4 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:flutter/material.dart';
+
+import '../states/reservation_states.dart';
 part 'reservations_model.g.dart';
 
 @JsonSerializable()
@@ -25,6 +28,9 @@ class ReservationsModel {
   final int? programmedReturnDate;
   final String programmedReturnPlace;
 
+  //Reservation states informations
+  ReservationStates reservationStates = ReservationStates();
+
   ReservationsModel({
     required this.vehiculeType,
     required this.vehiculeModel,
@@ -44,4 +50,26 @@ class ReservationsModel {
 
   //Convert dart class into Json format
   Map<String, dynamic> toJson() => _$ReservationsModelToJson(this);
+
+  void updateReservationStates(
+      {bool? isDepositP,
+      bool? isDepositA,
+      bool? isDepositD,
+      bool? isDepositR,
+      bool? isDepositDo,
+      bool? isReturnP,
+      bool? isReturnA,
+      bool? isReturnD,
+      bool? isReturnDo}) {
+    reservationStates.setReservationState(
+        isDepositP: isDepositP,
+        isDepositA: isDepositA,
+        isDepositD: isDepositD,
+        isDepositR: isDepositR,
+        isDepositDo: isDepositDo,
+        isReturnP: isReturnP,
+        isReturnA: isReturnA,
+        isReturnD: isReturnD,
+        isReturnDo: isReturnDo);
+  }
 }
